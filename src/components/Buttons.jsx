@@ -4,15 +4,15 @@ import { SlRefresh } from 'react-icons/sl';
 const Buttons = ({handleSort}) => {
     const navigate = useNavigate();
     return (
-        <section className='w-[300px] flex items-center justify-evenly p-[30px]'>
+        <section className='w-[300px] flex items-center justify-between p-[30px]'>
             <button
                 onClick={handleSort}
-                className='border-2 text-[28px] px-[10px] py-[6px] rounded'
+                className='border-2 md:text-[28px] px-[10px] py-[6px] rounded'
             >
                 SORT
             </button>
             <button onClick={() => navigate(0)}>
-                <SlRefresh size={35} />
+                <SlRefresh className='w-[25px] h-[25px] md:w-[45px] md:h-[45px]' />
             </button>
         </section>
     );

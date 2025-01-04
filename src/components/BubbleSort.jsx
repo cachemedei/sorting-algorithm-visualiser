@@ -12,13 +12,13 @@ const BubbleSort = () => {
 
     return (
         <main className='flex flex-col items-center justify-between h-[600px]'>
-            <div className='relative w-[750px] h-[700px] mx-auto mt-[50px]'>
+            <div className='relative mx-auto mt-[50px] w-[fit] h-[500px] md:w-[750px] md:h-[700px]'>
                 {array.map((number, i) => {
                     const isHighlighted = highlighted.includes(i);
                     return (
                         <div
                             key={i}
-                            className={`absolute rounded-full ${
+                            className={`rounded-full md:absolute ${
                                 isHighlighted
                                     ? highlighted[0] === i
                                         ? 'bg-purple-300'
@@ -28,8 +28,8 @@ const BubbleSort = () => {
                             style={{
                                 height: `${number}px`,
                                 width: `${number}px`,
-                                left: `${i * 80}px`,
-                                bottom: `${i * 35}px`,
+                                left: `${i * 70}px`,
+                                bottom: `${i * 40}px`,
                             }}
                         ></div>
                     );
