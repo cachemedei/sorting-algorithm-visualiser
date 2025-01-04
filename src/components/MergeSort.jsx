@@ -3,7 +3,7 @@ import useArray from '../hooks/use-array.js';
 import Buttons from './Buttons.jsx';
 
 const MergeSort = () => {
-    const { array, setArray } = useArray(40, 300);
+    const { array, setArray } = useArray(25, 300);
 
     const handleSort = () => {
         const sortedArray = mergeSort(array);
@@ -12,13 +12,13 @@ const MergeSort = () => {
 
     return (
         <main className='flex flex-col items-center justify-between h-[600px]'>
-            <div className='flex justify-evenly items-end w-fit mx-auto mt-[50px]'>
+            <div className='flex flex-col justify-evenly items-center w-fit mx-auto mt-[50px]'>
                 {array.map((number, i) => {
                     return (
                         <div
                             key={i}
-                            className='bg-orange-300 w-[20px] mx-[3px] rounded'
-                            style={{ height: `${number}px` }}
+                            className='bg-orange-300 h-[15px] mb-[3px] rounded'
+                            style={{ width: `${number * 2}px` }}
                         ></div>
                     );
                 })}
