@@ -1,10 +1,29 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import './index.css';
+import Nav from './components/Nav';
+import MergeSort from './components/MergeSort';
+import BubbleSort from './components/BubbleSort';
+import QuickSort from './components/QuickSort';
+import HeapSort from './components/HeapSort';
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Nav />,
+        children: [
+            { path: '/merge', element: <MergeSort /> },
+            { path: '/bubble', element: <BubbleSort /> },
+            { path: '/quick', element: <QuickSort /> },
+            { path: '/heap', element: <HeapSort /> },
+        ],
+    },
+]);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
+);
