@@ -14,20 +14,20 @@ const Nav = () => {
                         Heap Sort
                     </NavLink>
                     <NavLink
-                        to='/merge'
-                        className={({ isActive }) =>
-                            isActive ? 'border-2 p-2 rounded' : 'p-2 rounded'
-                        }
-                    >
-                        Merge Sort
-                    </NavLink>
-                    <NavLink
                         to='/bubble'
                         className={({ isActive }) =>
                             isActive ? 'border-2 p-2 rounded' : 'p-2 rounded'
                         }
                     >
                         Bubble Sort
+                    </NavLink>
+                    <NavLink
+                        to='/merge'
+                        className={({ isActive }) =>
+                            isActive ? 'border-2 p-2 rounded' : 'p-2 rounded'
+                        }
+                    >
+                        Merge Sort
                     </NavLink>
                     <NavLink
                         to='/quick'

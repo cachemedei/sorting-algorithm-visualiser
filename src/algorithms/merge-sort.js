@@ -19,7 +19,7 @@ function merge(left, right) {
 }
 
 export function mergeSort(array) {
-    
+
     if (array.length === 1) {
         return array;
     }
@@ -31,19 +31,21 @@ export function mergeSort(array) {
     return merge(mergeSort(left), mergeSort(right));
 }
 
+
+
 /** merge() function
- * initiliazes an empty array and pointers to track the current position in the 
+ * initiliazes an empty array and pointers to track the current position in the
  * left and right arrays
- * 
- * iterate while both arrays have unsorted elements, compare each element in focus from 
+ *
+ * iterate while both arrays have unsorted elements, compare each element in focus from
  * left and right and add the smaller one to the resultArray
- * 
+ *
  * add any remaining elements to the end of resultArray
-*/
+ */
 
 /** mergeSort() function
  * if the array has 1 element, return it
- * 
+ *
  * split the array into 2, left and right by using the middle index
  * recursively call merge on the left and right arrays
  */

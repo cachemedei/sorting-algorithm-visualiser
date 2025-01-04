@@ -17,7 +17,7 @@ const MergeSort = () => {
                     return (
                         <div
                             key={i}
-                            className='bg-green-200 w-[20px] mx-[3px] rounded'
+                            className='bg-orange-300 w-[20px] mx-[3px] rounded'
                             style={{ height: `${number}px` }}
                         ></div>
                     );
